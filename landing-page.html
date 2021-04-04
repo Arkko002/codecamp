@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Product Landing Page</title>
+	</head>
+
+	<body>
+		<header id="header">
+			<img id="header-img" alt="Company logo" src="https://i.imgur.com/t48No7s.png">
+			<nav id="nav-bar">
+				<a class="nav-link" href="#features">Features</a>
+				<a class="nav-link" href="#guide">Guide</a>
+				<a class="nav-link" href="#pricing">Pricing</a>
+			</nav>
+		</header>
+
+		<main id="main">
+			<form id="form" action="https://www.freecodecamp.com/email-submit">
+				<p>Try Our Product</p>
+				<input id="email" type="email" name="email" placeholder="Type your email here">
+				<input id="submit" type="submit" value="Sign up">
+			</form>
+
+			<section id="features">
+				<div id="features-div">
+					<img src="https://i.imgur.com/QGgOHBJ.png" alt="">
+					<p>First feature lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis convallis turpis, in venenatis nibh.</p>
+				</div>
+
+				<div id="features-div">
+					<img src="https://i.imgur.com/sxsIcDB.png" alt="">
+					<p>Second feature fusce tincidunt lobortis ligula, sed feugiat elit eleifend ac.</p>
+				</div>
+
+				<div id="features-div">
+					<img src="https://i.imgur.com/ul1TIgK.png" alt="">
+					<p>Third feature proin semper eros sit amet libero tempus, dapibus mattis urna convallis. Nunc ullamcorper arcu et dui aliquet, a interdum dolor euismod.</p>
+				</div>
+			</section>
+
+			<section id="guide">
+				<iframe width="640" height="360"
+					src="https://www.youtube.com/embed/tnGaCZZ5Z28"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</section>
+
+			<section id="pricing">
+				<div id="price-div">
+					<label>100$</label>
+					<p>Lorem ipsum</p>
+					<p>dolor sit</p>
+					<p>amet</p>
+					<input id="order-button" type="button" value="Order">
+				</div>	
+
+				<div id="price-div">
+					<label>100$</label>
+					<p>Lorem ipsum</p>
+					<p>dolor sit</p>
+					<p>amet</p>
+					<input id="order-button" type="button" value="Order">
+				</div>	
+
+				<div id="price-div">
+					<label>100$</label>
+					<p>Lorem ipsum</p>
+					<p>dolor sit</p>
+					<p>amet</p>
+					<input id="order-button" type="button" value="Order">
+				</div>	
+			</section>
+		</main>
+
+		<footer>
+			<div id="footer-div">
+				<a class="nav-link" href="#contact">Contact</a>
+				<a class="nav-link" href="#privacy">Privacy</a>
+			</div>
+
+			<div id="footer-div">
+				<p>Icons by Raj Dev on freeicons.io</p>
+			</div>
+
+		</footer>
+	</body>
+</html>
+
+<style>
+	:root {
+		--bg-button-color: rgba(0, 128, 0, 30%);
+		--border-color: #008000;
+		--bg-hover-color: rgba(0, 128, 0, 50%);
+		--bg-color: rgba(0, 128, 0, 20%);
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		margin: 0;
+	}
+
+	#header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		right: 0;
+		left: 0;
+
+		min-height: 60px;
+
+		background-color: white;
+		opacity: 1.0;
+	}
+
+	#header-img {
+		height: 50px;
+		margin-right: auto;
+	}
+
+	.nav-link {
+		padding: 20px;
+		color: inherit;
+		text-decoration: inherit;
+	}
+
+	.nav-link:hover {
+		text-decoration: solid underline var(--border-color) 3px;
+	}
+
+	input[type=button] {
+		background-color: var(--bg-button-color);
+
+		border: none;
+	}
+
+	input[type=submit] {
+
+		background-color: var(--bg-button-color);
+		border: none;
+	}
+
+	input[type=button]:hover {
+		background-color: var(--bg-hover-color);
+	}
+
+	input[type=submit]:hover {
+		background-color: var(--bg-hover-color);
+	}
+
+	#main {
+		position: relative;
+
+		margin-top: 60px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-items: center;
+	}
+
+	#features-div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		max-width: 800px;
+		width: 70vw;		
+
+		margin-top: 60px;
+		
+	}
+
+	#features-div img {
+		padding-right: 20px;
+
+		height: 90px;
+		width: 90px;
+	}
+
+	#form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-top: 60px;
+		min-width: 40vw;
+	}
+
+	#form p {
+		font-size: 32px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: var(--border-color);
+	}
+
+	#guide {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+
+	#email {
+		margin: 20px;
+		width: 80%;
+	}
+
+	#submit {
+		align-self: center;
+		width: 100px;
+		height: 30px;
+	}
+
+	#pricing {
+		display: grid;
+		width: 90vw;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 10%;
+
+		font-size: 1.2em;
+
+		text-align: center;
+	}
+
+	#price-div {
+		height: 100%;
+		width: 200px;
+		border-top: solid var(--border-color) 4px;
+		background-color: var(--bg-color);
+
+		box-shadow: black 5px 5px 5px;
+	}
+
+	#price-div label {
+		position: relative;
+		top: 10px;
+
+		width: 100%;
+	}
+
+	#order-button {
+		height: 40px;
+		width: 100%;
+	}
+
+	footer {
+		border-top: solid var(--border-color) 2px;
+		background-color: var(--bg-color);
+
+		width: 70vw;
+		height: 90px;
+		margin-top: 50px;
+	}
+
+	footer .nav-link {
+		padding: 5px;
+	}
+
+	#footer-div {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	@media (min-width: 700px) {
+		#pricing {
+			width: 60vw;
+		}
+	}
+
+	@media (max-width: 500px) {
+		#features-div img {
+			height: 50px;
+			width: 50px;
+		}
+	}
+
+	@media (max-width: 800px) {
+		#header {
+			flex-direction: column;
+		}
+
+		#pricing {
+			gap: 10px;
+		}
+	}
+</style>

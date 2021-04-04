@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Survey Form</title>
+	</head>
+
+	<body>
+		<main>
+			<div id="title-div">
+				<h1 id="title">Fake Survey</h1>
+				<p id="description">This survey is totally fake</p>
+			</div>
+
+			<form id="survey-form">
+				<div id="input-div">
+					<label for="name" id="name-label">Name</label>
+					<input id="name" type="text" required placeholder="Type your name here.">
+				</div>
+
+				<div id="input-div">
+					<label for="email" id="email-label">E-mail</label>
+					<input id="email" type="email" required placeholder="Type your email here.">
+				</div>
+
+				<div id="input-div">
+					<label for="number" id="number-label">Favourite number (between 1 and 99)</label>
+					<input id="number" type="number" min="1" max="99" placeholder="Type your favourite number here.">
+				</div>
+				
+				<div id="input-div">
+					<label for="dropdown" id="dropdown-label">Choose your favourite animal</label>
+					<select id="dropdown">
+						<option value="dog">Dog</option>
+						<option value="cat">Cat</option>
+						<option value="goldfish">Gold fish</option>
+					</select>
+				</div>
+
+				<div id="input-div">
+					<label id="radio-label">Is this a real survey?</label>
+
+					<div id="choice-div">
+						<input type="radio" id="radio-yes" name="answer" value="yes">
+						<label for="radio-yes">Yes</label>
+					</div>
+
+					<div id="choice-div">
+						<input type="radio" id="radio-no" name="answer" value="no">
+						<label for="radio-no">No</label>
+					</div>
+				</div>
+
+				<div id="input-div">
+					<label id="checkbox-label">Are you sure?</label>
+
+					<div id="choice-div">
+						<input id="checkbox-yes" type="checkbox" name="inquiry" checked value="yes">
+						<label for="checkbox-yes">Yes</label>
+					</div>
+
+					<div id="choice-div">
+						<input id="checkbox-no" type="checkbox" name="inquiry" value="no">
+						<label for="checkbox-no">No</label>
+					</div>
+				</div>
+
+				<div id="input-div">
+					<label for="textarea" id="testarea-label">Any comments?</label>
+					<textarea id="textarea" name="comment" rows="5" cols="30"></textarea>
+				</div>
+
+				<div id="input-div">
+					<input id="submit" type="submit">
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
+
+<style>
+	body {
+		background: url("https://i.imgur.com/WCNSYFL.png"), hsla(240, 100%, 40%, 60%);
+		background-size: cover;
+		background-blend-mode: multiply;
+	}
+	
+	main {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+
+		align-items: center;
+		justify-content: center;
+
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.1em;
+	}
+
+	#title-div {
+		color: white;
+
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+	}
+
+	#survey-form {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1;
+
+		max-width: 800px;
+		width: 80vw;
+
+		background-color: hsla(215, 74%, 55%, 0.49);
+		color: white;
+	}
+
+	#input-div {
+		display: flex;
+		flex-direction: column;
+		margin: 20px;
+	}
+
+	#input-div label {
+		padding-bottom: 10px;
+	}
+
+	#choice-div{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#choice-div label {
+		padding: 0;
+	}
+
+	#submit {
+		max-width: 200px;
+		align-self: center;
+	}
+</style>

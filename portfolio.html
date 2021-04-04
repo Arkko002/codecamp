@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Arkko's Portfolio</title>
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<nav id="navbar">
+				<a class="nav-link" href="#welcome-section">Welcome</a>
+				<a class="nav-link" href="#projects">Projects</a>
+				<a class="nav-link" href="#contact-info">Contact</a>
+			</nav>
+
+			<main id="main">
+				<section id="welcome-section">
+					<h1>Welcome</h1>
+					<h2>This is my portfolio</h2>
+				</section>
+
+				<section id="projects">
+					<h1>My Projects</h1>
+
+					<div id="project-tiles-div">
+						<a class="project-tile" href="https://github.com/" target="_blank">
+							<img src="https://i.imgur.com/iqMAHrN.png" alt="project">
+							<span>First Project</span>
+						</a>
+						<a class="project-tile" href="https://github.com/" target="_blank">
+							<img src="https://i.imgur.com/iqMAHrN.png" alt="project">
+							<span>Second Project</span>
+						</a>
+						<a class="project-tile" href="https://github.com/" target="_blank">
+							<img src="https://i.imgur.com/iqMAHrN.png" alt="project">
+							<span>Third Project</span>
+						</a>
+					</div>
+				</section>
+
+				<section id="contact-info">
+					<h1>Contact Me<h1>
+					
+					<div id="contact-buttons">
+						<a id="profile-link" class="btn-contact" href="https://github.com/fakelink" target="_blank">GitHub</a>
+						<a class="btn-contact" href="mailto:fake@mail.com">Send Mail</a>
+						<a class="btn-contact" href="tel:123-123-123">Call Me</a>
+					</div>
+				</section>
+			</main>
+
+			<footer>
+				<p>This portfolio was created for freecodecamp.org. All contact informations are fake.</p>
+			</footer>
+		</div>
+	</body>
+</html>
+
+<style>
+	:root {
+		--bg-color: #464555;
+		--alt-bg-color: #ABA9BC;
+		--highlight-color: #7B86F6;
+		--alt-highlight-color: #B42237;
+	}
+
+
+	* {
+		box-sizing: border-box;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	* a {
+		color: inherit;
+		text-decoration: inherit;
+	}
+
+	body {
+		margin: 0;
+		color: white;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		color: var(--alt-highlight-color)
+	}
+
+	#site-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		overflow: auto;
+	}
+
+	#navbar {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		position: fixed;
+		z-index: 99;
+		top: 10px;
+		height: 50px;
+
+		background-color: var(--bg-color);
+		border-bottom: solid 3px var(--highlight-color);
+		border-top: solid 3px var(--highlight-color);
+		border-radius: 10px;
+		opacity: 1.0;
+	}
+
+
+	.nav-link {
+		text-align: center;
+
+		padding: 15px;
+	}
+
+	.nav-link:hover {
+		background-color: var(--highlight-color);
+		border-radius: 10px;
+	}
+
+	@media (max-width: 600px) {
+		#navbar {
+			flex-direction: column;
+		}
+	}
+
+	#main {
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#welcome-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		height: 100vh;	
+		width: 100vw;
+
+		background-color: var(--bg-color);
+	}
+
+	#projects {
+		background-color: var(--alt-bg-color);
+		width: 100vw;
+		padding-top: 50px;
+		padding-bottom: 100px;
+		text-align: center;
+	}
+
+	#project-tiles-div {
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 50px;
+	}
+
+	.project-tile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		background-color: var(--bg-color);
+		padding: 20px;
+	}
+
+	.project-tile img {
+		margin-bottom: 15px;
+	}
+
+	.project-tile:hover {
+		animation: 1s project-change-color;	
+	}
+
+	@keyframes project-change-color {
+		from {
+			background-color: var(--bg-color);
+		}
+
+		to {
+			background-color: var(--alt-highlight-color);
+		}
+	}
+
+	#contact-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		width: 100vw;
+		height: calc(100vh - 70px);
+
+		background-color: var(--bg-color);
+	}
+
+	.btn-contact {
+		padding: 20px;
+		font-size: 24px;
+	}
+
+	.btn-contact:hover {
+		animation: 1s btn-underline;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes btn-underline {
+		from {
+			text-decoration: underline solid rgba(180, 34, 55, 0%) 4px;
+		}
+		
+		to {
+			text-decoration: underline solid rgba(180, 34, 55, 100%) 4px;
+		}
+	}
+
+	footer {
+		border-top: solid 2px var(--highlight-color);
+
+		text-align: center;
+
+		background-color: var(--bg-color);
+		height: 70px;
+		width: 100vw;
+	}
+
+</style>

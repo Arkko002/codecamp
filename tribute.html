@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Linus Torvalds Tribute Page</title>
+	</head>
+
+	<body>
+		<main id="main">
+			<h1 id="title">Linus Torvalds</h1>
+
+			<div id="img-div">
+				<picture>
+					<source media="(max-width: 400px)" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/LinuxCon_Europe_Linus_Torvalds_05.jpg/256px-LinuxCon_Europe_Linus_Torvalds_05.jpg">
+					<source media="(max-width: 800px)" srcset="https://www.linuxjournal.com/sites/default/files/styles/max_650x650/public/u%5Buid%5D/linus-small.jpeg">
+					<img id="image" src="https://raw.githubusercontent.com/deepaksood619/TributeLinusTorvalds/master/torvald.jpg" alt="">
+				</picture>
+				<p id="img-caption">Linus Torvalds</p>
+			</div>
+
+			<div id="tribute-div">
+				<section id="tribute-info">
+					<p>	Linus Benedict Torvalds (born 28 December 1969) is a Finnish-American software engineer who is the creator and, historically, the main developer of the Linux kernel, used by Linux distributions and other operating systems such as Android and Chrome OS. He also created the distributed revision control system Git and the scuba dive logging and planning software Subsurface.</p>
+
+					<p>He was honored, along with Shinya Yamanaka, with the 2012 Millennium Technology Prize by the Technology Academy Finland "in recognition of his creation of a new open source operating system for computers leading to the widely used Linux kernel." He is also the recipient of the 2014 IEEE Computer Society Computer Pioneer Award[5] and the 2018 IEEE Masaru Ibuka Consumer Electronics Award. </p>
+
+					<p>To learn more <a id="tribute-link" href="https://en.wikipedia.org/wiki/Linus_Torvalds" target="_blank">click here.</a></p>
+				</section>
+
+				<section id="tribute-history">
+					<ul>
+						<li><time datetime="1969-12-28">28 December 1969</time> - Linus was born in Helsinki, Finland.</li>
+						<li><time datetime="1981">1981</time> - Linus' intrest in computers begins with Commodore VIC-20.</li>
+						<li><time datetime="1988">1988</time> to <time datetime="1996">1996</time> - Attended and graduated from University of Helsinki with a master's degree in <abbr title="Computer Science">CS</abbr>.</li>
+						<li><time datetime="1991-01-05">5 January 1991</time> - Linus purchased a clone of IBM PC before receiving his MINIX copy, which enabled him to begin work on Linux.</li>
+
+						<li><time datetime="1991-03-14">14 March 1994</time> - Version 1.0 of Linux is released.</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
+
+<style>
+	:root {
+		--main-color: #BBDEF0;
+		--transparent-color: rgba(187, 222, 240, 30%);
+	}
+
+	#main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-items: center;
+	}
+
+	#title {
+		align-self: stretch;
+		justify-self: center;
+		text-align: center;
+		background-color: var(--main-color);
+	}
+
+	#image {
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		height: auto;
+		width: auto;
+	}
+
+	#img-div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-items: center;
+		align-content: center;
+	}
+
+	#img-caption {
+		font-size: 12px;
+	}
+
+	#tribute-div {
+		display: grid;
+		gap: 20px 50px;
+		grid-template-columns: 2fr 1fr;
+
+		max-width: 80vw;
+	}
+
+	@media (max-width: 500px) {
+		#tribute-div {
+			grid-template-columns: unset;
+			grid-template-rows: auto auto;
+			gap: 0px 0px;
+		}
+
+		#tribute-history {
+			order: 1;
+		}
+
+		#tribute-info {
+			order: 2;
+		}
+	}
+
+	#tribute-info {
+		border-top: 5px solid var(--main-color);
+		display: flex;
+		flex-direction: column;
+	}
+
+	#tribute-info p {
+		align-self: center;
+		text-align: justify;
+	}
+	
+	#tribute-history {
+		border-top: 5px solid #BBDEF0;
+		background-color: var(--transparent-color);
+	}
+
+	#tribute-history li {
+		padding-top: 10px;
+	}
+
+	li::marker {
+		color: var(--main-color);
+	}
+
+	#tribute-link {
+		align-self: center;
+	}
+</style>
